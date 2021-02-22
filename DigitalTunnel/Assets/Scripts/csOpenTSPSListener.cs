@@ -52,8 +52,8 @@ public class csOpenTSPSListener : MonoBehaviour {
 	
 	public void PersonEntered(Person person){
 		Debug.Log(" person entered with ID " + person.id);
-		GameObject personObject = (GameObject)Instantiate(personMarker, positionForPerson(person), Quaternion.identity);
-		personObject.GetComponent<Renderer>().material = materials[person.id % materials.Length];
+        GameObject personObject = (GameObject)Instantiate(personMarker, positionForPerson(person), Quaternion.Euler(new Vector3(0f, -90f, 0f)));
+		//personObject.GetComponent<Renderer>().material = materials[person.id % materials.Length];
 		peopleCubes.Add(person.id,personObject);
 	}
 

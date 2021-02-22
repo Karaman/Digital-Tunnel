@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/Scenes/openTSPSReceiver.unity
+    guid: 199e1fef3184b4f33a9a5a50e7954f35
   m_configObjects: {}
