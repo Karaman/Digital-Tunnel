@@ -23,6 +23,7 @@ public class MatchCharacterAnimation : MonoBehaviour
     private void Awake()
     {
         charAnim = GetComponent<Animator>();
+        // DetermingRotation and Position 
     }
 
     void Update()
@@ -47,6 +48,7 @@ public class MatchCharacterAnimation : MonoBehaviour
         currentZ = transform.position.x;
         float delta = (currentZ - initialZ) *10f; // mult by mag factor 
         currDer = delta > dirlimit? true : false;
+        charAnim.SetBool("Facing", transform.position.z > 0f ? false : true);
         charAnim.SetBool("dirRL", currDer);
         if (currDer != initDir)
         {

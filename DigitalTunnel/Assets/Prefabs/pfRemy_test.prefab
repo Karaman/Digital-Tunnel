@@ -2171,10 +2171,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  idlingLimit: 5
+  idlingLimit: 0.5
   counter: 0.2
   strtcounter: 0
-  dirlimit: 0.5
+  dirlimit: 0.05
   currDer: 1
   initDir: 1
   outputSpeed: 0
