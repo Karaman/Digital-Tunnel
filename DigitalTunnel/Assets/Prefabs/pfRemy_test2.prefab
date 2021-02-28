@@ -879,7 +879,7 @@ GameObject:
   - component: {fileID: 6168213516198058478}
   - component: {fileID: 1646412923918086315}
   m_Layer: 0
-  m_Name: Remy_test2
+  m_Name: pfRemy_test2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -936,9 +936,10 @@ MonoBehaviour:
   idlingLimit: 0.5
   counter: 0.2
   strtcounter: 0
-  dirlimit: 0.05
+  dirlimit: 0.5
   currDer: 1
   initDir: 1
+  delta: 0
   outputSpeed: 0
 --- !u!1 &3576491723827263508
 GameObject:
