@@ -16,6 +16,7 @@ public class MatchCharacterAnimation : MonoBehaviour
     private bool isMoving = false;
     public bool currDer = true;
     public bool initDir = true;
+    public float delta = 0f; 
 
     // for outputs 
     public float outputSpeed = 0f;
@@ -46,15 +47,14 @@ public class MatchCharacterAnimation : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
         currentZ = transform.position.x;
-        float delta = (currentZ - initialZ) *10f; // mult by mag factor 
+        delta = (currentZ - initialZ) *10f; // mult by mag factor 
         currDer = delta > dirlimit? true : false;
         charAnim.SetBool("Facing", transform.position.z > 0f ? false : true);
         charAnim.SetBool("dirRL", currDer);
         if (currDer != initDir)
         {
-            Debug.Log("turning"); 
-            charAnim.SetTrigger("turning");
-            initDir = currDer; 
+            Debug.Log("turning");
+            initDir = currDer;
         }
         speed = Mathf.Abs(delta / counter);
         if (speed <= idlingLimit)
